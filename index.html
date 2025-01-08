@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>谭燕 - 个人科研主页</title>
+    <style>
+        /* General reset and box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #6e7dff, #00d2ff);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-bottom: 5px solid #4CAF50;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            position: relative;
+        }
+
+        section h2::before {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: #4CAF50;
+            left: 0;
+            bottom: -10px;
+        }
+
+        .project {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .project h3 {
+            font-size: 1.6rem;
+            color: #333;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .project h3:hover {
+            color: #00d2ff;
+        }
+
+        .project a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        pre code {
+            background: #282c34;
+            color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            display: block;
+            margin-top: 10px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            margin-top: 30px;
+            border-top: 5px solid #4CAF50;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .contact-info li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-info li a {
+            color: #00d2ff;
+            text-decoration: none;
+        }
+
+        .contact-info li a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            section h2 {
+                font-size: 1.6rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .project h3 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>谭燕 - 个人科研主页</h1>
+        <p>欢迎访问我的个人科研主页！</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>研究方向</h2>
+            <ul>
+                <li><strong>分散自适应控制</strong>：研究多子系统互联系统中的分散控制策略，重点关注如何在不依赖中心化计算的情况下设计高效、稳定的控制方案。</li>
+                <li><strong>时变反馈增益设计</strong>：研究如何在时变环境下，动态调整反馈增益，以提高系统的跟踪精度与稳定性。</li>
+                <li><strong>复杂非线性系统</strong>：探讨如何设计适应时变参数的控制算法，解决复杂非线性系统的控制问题。</li>
+                <li><strong>多关节刚性机械臂控制</strong>：开发用于多关节机械臂的高精度快速跟踪控制方法，适用于时变轨迹跟踪。</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>主要项目</h2>
+
+            <div class="project">
+                <h3><a href="https://github.com/yourusername/distributed-adaptive-control" target="_blank">分散自适应控制算法</a></h3>
+                <p>该项目实现了分散自适应控制算法，适用于互联系统的稳定性和性能优化问题。该算法特别适用于没有中心控制器的复杂系统。</p>
+                <pre><code>
+git clone https://github.com/yourusername/distributed-adaptive-control.git
+cd distributed-adaptive-control
+python main.py
+                </code></pre>
+            </div>
+
+            <div class="project">
+                <h3><a href="https://github.com/yourusername/robot-arm-control" target="_blank">机械臂高精度轨迹跟踪控制</a></h3>
+                <p>该项目实现了多关节刚性机械臂的高精度轨迹跟踪控制算法，能够在时变轨迹下实现快速且精确的控制。</p>
+                <pre><code>
+git clone https://github.com/yourusername/robot-arm-control.git
+cd robot-arm-control
+python simulate.py
+                </code></pre>
+            </div>
+
+            <div class="project">
+                <h3><a href="https://github.com/yourusername/time-varying-gain-control" target="_blank">时变增益控制设计</a></h3>
+                <p>该项目提供了适用于时变系统的增益控制方法，尤其适用于复杂动态系统中的控制任务。</p>
+                <pre><code>
+git clone https://github.com/yourusername/time-varying-gain-control.git
+cd time-varying-gain-control
+python main.py
+                </code></pre>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>个人研究成果</h2>
+            <ul>
+                <li>发表多篇关于分散控制、机械臂控制与非线性系统的高影响力SCI论文，包括一区和三区期刊。</li>
+                <li>多篇国际会议论文被EI收录，涉及自适应控制、非线性系统等领域。</li>
+                <li>已申请并获得专利，涉及多关节刚性机械臂的预设时间轨迹跟踪控制方法。</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>贡献与合作</h2>
+            <p>我始终相信开源和合作是推动科研进展的关键。如果您对我的项目感兴趣，或者希望共同合作，欢迎提Issue或提交Pull Request。</p>
+        </section>
+
+        <section>
+            <h2>联系方式</h2>
+            <ul class="contact-info">
+                <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
+                <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></li>
+                <li>ResearchGate: <a href="https://researchgate.net/profile/Your-Name" target="_blank">researchgate.net/profile/Your-Name</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p class="license">本项目采用 <a href="https://opensource.org/licenses/MIT" target="_blank">MIT
